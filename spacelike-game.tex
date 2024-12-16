@@ -1,0 +1,94 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\begin{document}
+
+\title{Relativistic Spacetime and Non-Causal Game Theory}
+\author{}
+\date{}
+\maketitle
+
+\section{Introduction}
+This document explores the incorporation of relativistic spacetime intervals into game theory, with a focus on scenarios where causality is challenged, leading to potential reverse influence of outcomes on decision-making processes.
+
+\section{Spacetime Geometry and Relativity Basics}
+In special relativity, the position and time of an event are represented by a four-vector:
+\begin{equation}
+    x^\mu = (ct, x, y, z),
+\end{equation}
+where $c$ is the speed of light. The spacetime interval $s^2$ is defined as:
+\begin{equation}
+    s^2 = (ct)^2 - x^2 - y^2 - z^2.
+\end{equation}
+Depending on the sign of $s^2$, the interval is classified as:
+\begin{itemize}
+    \item $s^2 > 0$: Time-like interval (causal relationship possible).
+    \item $s^2 = 0$: Light-like interval (events lie on the light cone).
+    \item $s^2 < 0$: Space-like interval (no causal relationship).
+\end{itemize}
+In space-like intervals, events may appear simultaneous or even reversed in causality in certain reference frames.
+
+\section{Game Theory in Non-Causal Settings}
+Consider a simple two-player game with players $A$ and $B$, where:
+\begin{itemize}
+    \item Player $A$ makes a decision $a$ at event $E_A$.
+    \item Player $B$ makes a decision $b$ at event $E_B$.
+\end{itemize}
+The events $E_A$ and $E_B$ are separated by a space-like interval, implying no clear causal order between them.
+
+The payoff functions for the players are:
+\begin{equation}
+    U_A(a, b), \quad U_B(a, b),
+\end{equation}
+representing their respective utilities based on actions $a$ and $b$. In a non-causal setting, decisions may depend on outcomes that are, in principle, influenced retrocausally.
+
+\subsection{Information Flow and Strategy Dependence}
+Under relativistic constraints, we assume:
+\begin{enumerate}
+    \item \textbf{Action dependence on outcomes}: Player $A$'s decision $a$ depends not only on local information $I_A$ but also on $b$, which is determined at $E_B$.
+    \item \textbf{Strategy representation}: Let $a = f_A(I_A, b)$ and $b = f_B(I_B, a)$.
+    \item \textbf{Reverse causality}: Player $B$'s decision $b$ can also be influenced by $a$, forming a closed-loop dependence.
+\end{enumerate}
+
+\section{Fixed-Point Analysis}
+In the non-causal framework, equilibrium strategies can be analyzed through fixed-point equations. Suppose:
+\begin{equation}
+    a = f_A(b), \quad b = f_B(a),
+\end{equation}
+where $f_A$ and $f_B$ are strategy functions. Solving for the fixed points gives:
+\begin{equation}
+    a^* = f_A(b^*), \quad b^* = f_B(a^*).
+\end{equation}
+
+\subsection{Example}
+Let the payoff functions be:
+\begin{equation}
+    U_A(a, b) = -a^2 + 2ab, \quad U_B(a, b) = -b^2 + 2ab.
+\end{equation}
+Assume linear strategies:
+\begin{equation}
+    a = \alpha b, \quad b = \beta a.
+\end{equation}
+Substituting, we have:
+\begin{equation}
+    a = \alpha (\beta a) \implies a(1 - \alpha \beta) = 0.
+\end{equation}
+The solutions are:
+\begin{equation}
+    a = 0 \quad \text{or} \quad \alpha \beta = 1.
+\end{equation}
+The corresponding $b$ values are $b = \beta a$. This demonstrates the calculation of fixed points under non-causal influences.
+
+\section{Interpretation and Physical Implications}
+In a relativistic framework:
+\begin{itemize}
+    \item Fixed points represent equilibria where decisions and payoffs are balanced.
+    \item Under space-like intervals, actions may mutually influence each other despite the absence of a causal order.
+    \item This analysis parallels retrocausal effects observed in quantum mechanics, such as time-symmetric interpretations.
+\end{itemize}
+
+\section{Conclusion}
+Integrating relativistic spacetime into game theory introduces intriguing possibilities for 
+decision-making under non-causal conditions.
+\end{document}
